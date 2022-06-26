@@ -1,0 +1,68 @@
+#main-div {
+  width: 100%;
+
+  #main-title {
+    text-align: center;
+
+    font-family: "Oswald", Helvetica, sans-serif;
+    font-size: 80px;
+    transform: skewY(-5deg);
+    letter-spacing: 4px;
+    word-spacing: -8px;
+    color: rgb(152, 151, 151);
+    text-shadow: -1px -1px 0 lightgrey, -2px -2px 0 lightgrey,
+      -3px -3px 0 lightgrey, -4px -4px 0 lightgrey, -5px -5px 0 lightgrey,
+      -6px -6px 0 lightgrey, -7px -7px 0 lightgrey, -8px -8px 0 lightgrey,
+      -30px 20px 40px white;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    button {
+      border: none;
+      border-radius: 3px;
+      color: white;
+      background-color: black;
+      width: 150px;
+      height: 40px;
+      margin: 0 5px;
+      font-size: large;
+      transition: all 0.7s ease;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 752px) {
+  #main-div {
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // justify-content: center;
+      margin: 30px 0;
+      button {
+        border: none;
+        border-radius: 3px;
+        color: white;
+        background-color: black;
+        width: 90%;
+        height: 40px;
+        margin: 5px 0;
+        font-size: large;
+        transition: none;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+#main {
+  margin-top: 50px;
+
+  #crypto-div {
+    margin: auto;
+    width: 90%;
+    display: flex;
+
+    #crypto-img {
+      width: 45%;
+      height: 65vh;
+      margin: auto;
+    }
+
+    #crypto-paragraph {
+      width: 50%;
+      height: 65vh;
+      margin: auto;
+    }
+  }
+
+  .carousel {
+    #cover-img {
+      width: 100%;
+      height: 90vh;
+      margin: 50px 0;
+    }
+  }
+
+  .bitcoin-area {
+    margin-bottom: 50px;
+
+    #bitcoin-div {
+      margin: auto;
+      width: 90%;
+      display: flex;
+
+      #bitcoin-img {
+        width: 45%;
+        height: 60vh;
+        margin: auto;
+      }
+
+      #bitcoin-paragraph {
+        width: 50%;
+        height: 60vh;
+        margin: auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #main {
+    margin-top: 50px;
+
+    #crypto-div {
+      margin: auto;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+
+      #crypto-img {
+        width: 90%;
+        margin-bottom: 50px;
+        order: 1;
+      }
+
+      #crypto-paragraph {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        order: 2;
+      }
+    }
+
+    .carousel {
+      #cover-img {
+        width: 100%;
+        height: 90vh;
+        margin: 50px 0;
+
+        #carousel-image {
+          content: url("https://www.interactivebrokers.hu/images/web/cryptocurrency-hero.jpg");
+        }
+      }
+      button {
+        pointer-events: none;
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .bitcoin-area {
+      #bitcoin-div {
+        margin: auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        #bitcoin-img {
+          width: 90%;
+          margin-bottom: 50px;
+        }
+
+        #bitcoin-paragraph {
+          width: 90%;
+          margin: auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

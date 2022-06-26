@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 1;
+
+  .container-fluid {
+    width: 90%;
+    margin: auto;
+
+    #login-div {
+      .login-button {
+        text-decoration: none;
+        font-size: 1.3rem;
+        background-color: white;
+        color: rgb(23, 21, 21);
+        border: none;
+        border-radius: 10px;
+        width: 75px;
+        height: 40px;
+      }
+
+      #login-box {
+        width: 230px;
+        height: 190px;
+        position: absolute;
+        background-color: white;
+        border-radius: 5px;
+        margin: 15px 0 0;
+        transform: translateX(-80px);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+
+        form {
+          width: 80%;
+          margin: auto;
+
+          input {
+            border-color: black;
+          }
+        }
+      }
+    }
+
+    #logout-div {
+      .logout-button {
+        text-decoration: none;
+        font-size: 1.3rem;
+        background-color: white;
+        color: rgb(23, 21, 21);
+        border: none;
+        border-radius: 10px;
+        width: 75px;
+        height: 40px;
+      }
+    }
+
+    .collapse {
+      .navbar-nav {
+        a {
+          font-size: 1.3rem;
+          color: white;
+
+          &:hover {
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+.slide-nav {
+  background-color: rgb(255, 255, 255);
+  width: 98.5vw;
+  border-radius: 20px;
+  margin: auto;
+  transition: all 1s ease;
+
+  .container-fluid {
+    #login-div {
+      .login-button {
+        background-color: rgb(23, 21, 21);
+        color: white;
+      }
+    }
+
+    #logout-div {
+      .logout-button {
+        background-color: rgb(23, 21, 21);
+        color: white;
+      }
+    }
+    .collapse {
+      .navbar-nav {
+        a {
+          color: rgb(23, 21, 21);
+
+          &:hover {
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  height: 10vh;
+
+  background-color: black;
+}
+
+@media (max-width: 1100px) {
+  #app-div {
+    .navbar {
+      .container-fluid {
+        #login-div {
+          #login-box {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

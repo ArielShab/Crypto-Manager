@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Favorites</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="SCSS/style.css" />
+    <script defer src="JavaScript/favorites.js"></script>
+  </head>
+  <body>
+    <div id="app-div" class="app d-flex flex-column min-vh-100 bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link me-3" href="index">Home</a>
+              <a class="nav-link me-3" href="coins">Coins</a>
+              <a class="nav-link me-3" href="about">About</a>
+              <a class="nav-link me-3 bg-secondary rounded" href="favorites"
+                >Favorites</a
+              >
+            </div>
+          </div>
+          <div id="logout-div">
+            <button class="logout-button">Logout</button>
+          </div>
+        </div>
+      </nav>
+
+      <main id="main-content" class="flex-fill">
+        <% if(!data) { %>
+        <div class="text-center text-light mt-3">
+          <h1>No coins in favorites😕</h1>
+          <p><a class="text-light" href="coins">Let's add some coins now</a></p>
+        </div>
+        <% } else { %>
+        <table class="table table-light table-hover container text-center mt-5">
+          <thead>
+            <tr>
+              <th scope="col">Symbol</th>
+              <th scope="col">Price $</th>
+              <th scope="col">Open price $</th>
+              <th scope="col">Hight price $</th>
+              <th scope="col">Low price $</th>
+              <th scope="col">Price change %</th>
+              <th scope="col">Delete from favorites</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% for(let coin of data) { %>
+            <tr>
+              <th scope="row">
+                <%= coin.symbol.slice(0, coin.symbol.length - 4) %>
+              </th>
+              <td><%= coin.lastPrice %></td>
+              <td><%= coin.openPrice %></td>
+              <td><%= coin.highPrice %></td>
+              <td><%= coin.lowPrice %></td>
+              <td><%= coin.priceChangePercent %></td>
+              <td>
+                <button
+                  id="<%= coin.symbol.slice(0, coin.symbol.length - 4) %>"
+                  class="btn btn-dark favorite-btn"
+                >
+                  Delete from favorites
+                </button>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+        <% } %>
+      </main>
+
+      <footer
+        id="footer"
+        class="container-fluid d-flex align-items-center justify-content-center"
+      >
+        <div class="text-light">
+          &copy All the rights are saved to Ariel Shabtiev
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

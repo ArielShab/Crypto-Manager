@@ -67,7 +67,7 @@ if (cookie) {
     }
 
     if (resp.status === 200) {
-      location.reload();
+      window.location = "/index";
     }
   });
 }

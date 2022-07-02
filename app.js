@@ -49,6 +49,10 @@ app.use("/favorites", favoritesRouter);
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
+app.get("", (req, res) => {
+  res.redirect("/index");
+});
+
 app.get("/index", (req, res) => {
   res.setHeader("Content-Type", "text/html");
 

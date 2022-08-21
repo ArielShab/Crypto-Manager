@@ -1,0 +1,36 @@
+@local  = http://localhost:3900/api
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmRiZjdmNmVjYTc3ZTIyMzNkYzMyNGYiLCJpYXQiOjE2NTg2MTQxODF9.S1cbgIZl85KYKb5juYHKu9wRftRoniW8ReKXhLv9gHc
+
+POST {{local}}/users
+Content-Type: application/json
+
+{
+    "firstName": "ariel",
+    "lastName": "shabtiev",
+    "email": "ariel@ariel.com",
+    "password": "aaaaaaaa",
+    "gender": "2"
+}
+
+###
+POST {{local}}/auth
+Content-Type: application/json
+
+{
+    "email": "ariel@ariel.com",
+    "password": "aaaaaaaa"
+}
+
+###
+POST {{local}}/favorites
+Content-Type: application/json
+x-auth-token: {{token}}
+
+{
+    "symbol": "CCC"
+}
+
+### 
+GET {{local}}/favorites/getAllFavorites
+Content-Type: application/json
+x-auth-token: {{token}}

@@ -1,0 +1,62 @@
+#main-div {
+  height: 77vh;
+}
+
+#main-div #main-title {
+  text-align: center;
+  font-family: "Oswald", Helvetica, sans-serif;
+  font-size: 80px;
+  -webkit-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+  letter-spacing: 4px;
+  word-spacing: -8px;
+  color: #989797;
+  text-shadow: -1px -1px 0 lightgrey, -2px -2px 0 lightgrey,
+    -3px -3px 0 lightgrey, -4px -4px 0 lightgrey, -5px -5px 0 lightgrey,
+    -6px -6px 0 lightgrey, -7px -7px 0 lightgrey, -8px -8px 0 lightgrey,
+    -30px 20px 40px white;
+}
+
+#main-div .buttons button {
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: black;
+  width: 150px;
+  height: 40px;
+  margin: 0 5px;
+  font-size: large;
+  transition: all 0.7s ease;
+}
+
+#main-div .buttons button:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 752px) {
+  #main-div .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  #main-div .buttons button {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+    width: 90vw;
+    height: 7vh;
+    margin: 1vh 0;
+    font-size: large;
+    transition: none;
+  }
+
+  #main-div .buttons button:hover {
+    background-color: black;
+    color: white;
+  }
+}

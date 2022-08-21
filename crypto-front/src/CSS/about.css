@@ -1,0 +1,122 @@
+#main {
+  margin-top: 50px;
+}
+
+#crypto-div {
+  margin: auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#crypto-div #crypto-img {
+  width: 45%;
+  height: 65vh;
+  margin: auto;
+}
+
+#crypto-div #crypto-paragraph {
+  width: 50%;
+  height: fit-content;
+  margin: auto;
+}
+
+.carousel #cover-img {
+  width: 100%;
+  height: 90vh;
+  margin: 50px 0;
+}
+
+.bitcoin-area {
+  margin-bottom: 50px;
+}
+
+.bitcoin-area #bitcoin-div {
+  margin: auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bitcoin-area #bitcoin-div #bitcoin-img {
+  width: 45%;
+  height: 60vh;
+  margin: auto;
+}
+
+.bitcoin-area #bitcoin-div #bitcoin-paragraph {
+  width: 50%;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  #main {
+    margin-top: 50px;
+  }
+  #main #crypto-div {
+    margin: auto;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #main #crypto-div #crypto-img {
+    width: 90%;
+    margin-bottom: 50px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  #main #crypto-div #crypto-paragraph {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    height: fit-content;
+  }
+  #main .carousel #cover-img {
+    width: 100%;
+    height: fit-content;
+    margin: 50px 0;
+  }
+  #main .carousel #cover-img #carousel-image {
+    content: url("https://www.interactivebrokers.hu/images/web/cryptocurrency-hero.jpg");
+  }
+  #main .carousel button {
+    pointer-events: none;
+  }
+  #main .carousel button span {
+    display: none;
+  }
+  #main .bitcoin-area #bitcoin-div {
+    margin: auto;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #main .bitcoin-area #bitcoin-div #bitcoin-img {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  #main .bitcoin-area #bitcoin-div #bitcoin-paragraph {
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+  }
+}

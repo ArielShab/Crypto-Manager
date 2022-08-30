@@ -1,3 +1,5 @@
+// Get all the coins from the API
+
 export const getCoins = async () => {
   const response = await fetch("https://api2.binance.com/api/v3/ticker/24hr");
 
@@ -14,6 +16,8 @@ export const getCoins = async () => {
 
   return usdtCoins;
 };
+
+// Remove all the number after the decimal point except of the first 2
 
 export const removeZerosFromPrice = (price) => {
   for (let i = price.length; i > 0; i--) {

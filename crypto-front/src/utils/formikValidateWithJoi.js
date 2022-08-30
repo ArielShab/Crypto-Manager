@@ -1,5 +1,7 @@
 import Joi from "joi";
 
+// validate if signin/signup details are legal or correct
+
 const formikValidateWithJoi = (schema) => {
   return (values) => {
     const { error } = Joi.object(schema).validate(values, {

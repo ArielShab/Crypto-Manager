@@ -1,4 +1,4 @@
-// Get all the coins from the API
+// Get all the coins from the API and save only the coins with value in dollars
 
 export const getCoins = async () => {
   const response = await fetch("https://api2.binance.com/api/v3/ticker/24hr");
